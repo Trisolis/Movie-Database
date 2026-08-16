@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Popular Movies</h1>
+    {% for movie in movies %}
+        <div>
+            <a href="{{ url_for('movie', tmdb_id=movie['tmdb_id']) }}">
+                <p>{{ movie['title'] }} ({{ movie['release_date'] if movie['release_date'] else 'N/A' }})</p>
+            </a>
+            <p>Rating: {{ movie['vote_average'] }}</p>
+            <p>{{ movie['overview'] }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

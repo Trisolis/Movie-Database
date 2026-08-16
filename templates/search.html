@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Search: {{ q }}{% endblock %}
+
+{% block content %}
+    <h1>Results for "{{ q }}"</h1>
+    {% if movies %}
+        {% for movie in movies %}
+            <div>
+                <a href="{{ url_for('movie', tmdb_id=movie['tmdb_id']) }}">
+                    <p>{{ movie['title'] }} ({{ movie['release_date'] if movie['release_date'] else 'N/A' }})</p>
+                </a>
+                <p>Rating: {{ movie['vote_average'] }}</p>
+                <p>{{ movie['overview'] }}</p>
+                <p>{{ movie['tmdb_id'] }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No results found for "{{ q }}".</p>
+    {% endif %}
+{% endblock %}

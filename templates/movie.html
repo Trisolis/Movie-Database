@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ movie['title'] }}{% endblock %}
+
+{% block content %}
+    <h1>{{ movie['title'] }}</h1>
+    <p>Release Date: {{ movie['release_date'] }}</p>
+    <p>Rating: {{ movie['vote_average'] }} ({{ movie['vote_count'] }} votes)</p>
+    <p>Runtime: {{ movie['runtime'] }} mins</p>
+    <p>Language: {{ movie['original_language'] }}</p>
+    <p>{{ movie['tagline'] }}</p>
+    <p>{{ movie['overview'] }}</p>
+    {% if movie['poster_path'] %}
+        <img src="https://image.tmdb.org/t/p/w500{{ movie['poster_path'] }}" alt="{{ movie['title'] }}">
+    {% endif %}
+{% endblock %}
