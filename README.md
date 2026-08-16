@@ -27,10 +27,10 @@ A small app that allows users to create unique profiles, rate and search for mov
 - Responsive frontend with Bootstrap and Jinja2 templating
 
 ## API Reference
-This project uses the [___ API]()
+This project uses the [TMDB API](https://www.themoviedb.org/settings/api)
 The application currently uses the following endpoints:
-| Feature | ___ Endpoint |
-|---------|--------------|
+| Feature | TMDB Endpoint |
+|---------|---------------|
 | Feature 1 | Endpoint 1 |
 
 ## Demo
