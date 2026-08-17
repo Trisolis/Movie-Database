@@ -10,7 +10,7 @@ A small app that allows users to create unique profiles, rate and search for mov
 3. python -m venv venv
 4. source venv/Scripts/activate
 5. pip install -r requirements.txt
-6. Create a 'config.py' file with: `API key="[your TMDB API key here]"`. Get a free key at https://www.themoviedb.org/settings/api
+6. Create a 'config.py' file with: `API key="[your TMDB API key here]"` and `SECRET_KEY="[any random string]"`. Get a free key at https://www.themoviedb.org/settings/api
 7. python schema.py
 8. python.app.py
 9. Visit http://127.0.0.1:5000

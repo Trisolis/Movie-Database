@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
-{% block title %}Search: {{ q }}{% endblock %}
+{% block title %}Search: {{ query }}{% endblock %}
 
 {% block content %}
-    <h1>Results for "{{ q }}"</h1>
+    <h1>Results for "{{ query }}"</h1>
     {% if movies %}
         {% for movie in movies %}
             <div>
